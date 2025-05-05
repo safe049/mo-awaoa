@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="mo-awaoa",
-    version="1.0.5",
+    version="1.2",
     author="safe049",
     author_email="safe049@163.com",
     description="Multi-Objective Adaptive Whale Optimization Algorithm (MO-AWAOA)",

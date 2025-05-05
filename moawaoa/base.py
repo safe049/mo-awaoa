@@ -18,7 +18,7 @@ class Solution:
             self.f = list(f)     # 确保是列表
         self.rank = 0
         self.crowding_dist = 0
-        
+
     def dominates(self, other):
         """判断当前解是否支配另一个解（other 是另一个 Solution）"""
         return dominates(self.f, other.f)
@@ -36,10 +36,15 @@ class Problem:
 
 
 class Population:
-    def __init__(self, problem: Problem, size: int):
+    def __init__(self, problem: Problem, size: int, initial_solutions=None):
         self.problem = problem
         self.size = size
-        self.solutions = self._initialize()
+        if initial_solutions is not None:
+            # 使用给定初始解
+            self.solutions = [Solution(x, self.problem.evaluate(x)) for x in initial_solutions]
+        else:
+            # 随机初始化
+            self.solutions = self._initialize()
 
     def _initialize(self):
         lb, ub = self.problem.bounds
