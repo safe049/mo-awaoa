@@ -1,0 +1,49 @@
+# Python 编译文件
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.db
+*.sqlite3
+
+# 构建与发布相关
+build/
+dist/
+*.egg-info/
+eggs/
+develop-eggs/
+.installed.cfg
+.pytest_cache/
+
+# 虚拟环境
+venv/
+env/
+.virtualenvs/
+__pypackages__/
+
+# IDE 临时文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# 日志与测试输出
+*.log
+*.coverage
+htmlcov/
+pytest_output/
+
+# 示例运行结果或图像
+examples/*.png
+examples/*.jpg
+examples/*.json
+examples/*.csv
+
+# OS 相关
+.DS_Store
+Thumbs.db
+
+# pip 缓存
+pip-selfcheck.json
