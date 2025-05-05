@@ -33,7 +33,9 @@ class WOAOptimizer:
 
     def optimize(self, max_iter: int):
         start_time = time.time()
-
+        fitnesses = np.array([self.objective_func(p) for p in self.positions])
+        self.best_fitness = np.min(fitnesses)
+        self.best_position = self.positions[np.argmin(fitnesses)].copy()
         for iter in range(max_iter):
             a = 2 - iter * (2 / max_iter)
             l = np.random.uniform(-1, 1, self.n_particles)
